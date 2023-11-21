@@ -1,4 +1,13 @@
 .div-center {
   margin: 0 auto;
-  margin-top: 50px;;
+  margin-top: 50px;
+  margin-top: 125px;
 }
+
+
+@media only screen and (max-width: 500px) {
+  .card-resp {
+    margin-bottom: 25px;
+  }
+}
+
