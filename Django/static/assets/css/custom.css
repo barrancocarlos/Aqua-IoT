@@ -4,6 +4,26 @@
   margin-top: 125px;
 }
 
+.aqua-logo {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.text-primary {
+  color: #3380b6 !important;
+}
+
+.bg-menu-theme .menu-inner > .menu-item.active > .menu-link {
+  color: #3380b6;
+    background-color: rgb(64 160 232 / 22%) !important;
+}
+
+.bg-menu-theme .menu-inner > .menu-item.active:before {
+  background: #3380b6;
+}
+
+
+
 
 @media only screen and (max-width: 500px) {
   .card-resp {
