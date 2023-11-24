@@ -1,0 +1,105 @@
+{% load static %} {% include "head.html" %}
+
+<body>
+  {% block content %}
+
+  <!-- Layout wrapper -->
+  <div class="layout-wrapper layout-content-navbar">
+    <div class="layout-container">
+      <!-- Menu -->
+      {% include "menu.html" %}
+      <!-- / Menu -->
+
+      <!-- Layout container -->
+      <div class="layout-page">
+        <!-- Navbar -->
+        {% include "navbar.html" %}
+        <!-- / Navbar -->
+
+        <!-- Content wrapper -->
+        <div class="content-wrapper">
+          <!-- Content -->
+          <div class="container-xxl flex-grow-1 container-p-y">
+            <div class="row">
+              <div class="col-lg-8 mb-4 order-0">
+                <div class="card">
+                  <div class="d-flex align-items-end row">
+                    <!-- Expense Overview -->
+                    <div class="card h-100">
+                      <div class="card-body px-0">
+                        <div class="tab-content p-0">
+                          <div
+                            class="tab-pane fade show active"
+                            id="navs-tabs-line-card-income"
+                            role="tabpanel"
+                          >
+                            <div class="d-flex p-4 pt-3">
+                              <i class="menu-icon tf-icons bx bx-droplet"></i>                 
+                              <div>
+                                {% for umidade in umidades %}
+                                {% if forloop.last %}    
+                                <h6 class="mb-0 me-1">{{ umidade.nome }}</h6>                          
+                                  <small class="mb-0 me-1">Tipo: {{ umidade.tipo }}</small>
+                                  <br>                                                                  
+                                  <small class="mb-0 me-1">Grupo: {{ umidade.grupo }}</small>                         
+                                {% endif %}                               
+                                {% endfor %}                                 
+                              </div>
+                            </div>
+
+                            <!-- chart div -->
+                            <div id="chart"></div>
+                            <!-- Area chart-------------------------------------------------------------------- -->
+                            {% include "umidade-chart.html" %}
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--/ Expense Overview -->
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-4 order-1">
+                <div class="row">
+                  <div class="col-lg-6 col-md-12 col-6 mb-4">
+                    <div class="card">
+                      <div class="card-body">
+                        <div
+                          class="card-title d-flex align-items-start justify-content-between"
+                        >
+                          <div class="avatar flex-shrink-0">
+                            <img
+                              src="{% static 'assets/img/icons/unicons/umid.png' %}"
+                              alt="chart success"
+                              class="rounded"
+                            />
+                          </div>                         
+                        </div>
+                        <span class="fw-semibold d-block mb-1">Último valor Umidade</span>
+                        {% for umidade in umidades %}
+                        {% if forloop.last %}
+                        <h3 class="card-title mb-2">{{ umidade.umidade }} %</h3>
+                        <small class="text-success fw-semibold"> {{ umidade.data_criacao|date:"M d, P" }}</small>
+                        {% endif %}                               
+                        {% endfor %}
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- / Content -->
+
+        {% endblock %}
+
+        <!-- Footer -->
+        {% include "footer.html" %}
+      </div>
+    </div>
+  </div>
+</body>

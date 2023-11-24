@@ -3,8 +3,8 @@
 
 var options = {
           series: [{
-            name: "Grados",
-            data: [{% for temperature in temperatures %}{{ temperature.value}}{% if not forloop.last %},{% endif %}{% endfor %}]
+            name: "ppm",
+            data: [{% for tds in tdss %}{{tds.tds}}{% if not forloop.last %},{% endif %}{% endfor %}]
         }],
           chart: {
           height: 350,
@@ -30,7 +30,7 @@ var options = {
           },
         },
         xaxis: {          
-          categories: [{% for temperature in temperatures %}'{{ temperature.creation_date|date:"M d, P" }}',{% endfor %}],
+          categories: [{% for tds in tdss %}'{{ tds.data_criacao|date:"M d, P" }}',{% endfor %}],
         }
         };
 

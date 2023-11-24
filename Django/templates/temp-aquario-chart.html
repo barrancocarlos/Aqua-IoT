@@ -1,0 +1,40 @@
+<script type="text/javascript">
+
+
+var options = {
+          series: [{
+            name: "Graus",
+            data: [{% for temperatura in temperaturas %}{{temperatura.temperatura}}{% if not forloop.last %},{% endif %}{% endfor %}]
+        }],
+          chart: {
+          height: 350,
+          type: 'area',
+          zoom: {
+            enabled: true
+          }
+        },
+        dataLabels: {
+          enabled: false
+        },
+        stroke: {
+          curve: 'smooth'
+        },
+        title: {
+          text: '',
+          align: 'left'
+        },
+        grid: {
+          row: {
+            colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+            opacity: 0.5
+          },
+        },
+        xaxis: {          
+          categories: [{% for temperatura in temperaturas %}'{{ temperatura.data_criacao|date:"M d, P" }}',{% endfor %}],
+        }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+
+</script>

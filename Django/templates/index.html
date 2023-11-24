@@ -56,9 +56,13 @@
                             <img src="{% static 'assets/img/icons/unicons/tempp.png' %}" alt="chart success"
                               class="rounded" />
                           </div>
-                        </div>
+                        </div>                        
                         <span class="fw-semibold d-block mb-1">Temperatura Plantas</span>
-                        <h3 class="card-title mb-2">30º</h3>
+                        {% for temperatura in temperaturas %}
+                        {% if forloop.last %}
+                        <h3 class="card-title mb-2">{{ temperatura.temperatura }} º</h3>
+                        {% endif %}                               
+                        {% endfor %}
                         <small class="text-success fw-semibold"> Ativo</small>
                       </div>
                     </div>
@@ -76,7 +80,11 @@
                           </div>
                         </div>
                         <span class="fw-semibold d-block mb-1">Nível de Água</span>
-                        <h3 class="card-title text-nowrap mb-2">22cm</h3>
+                        {% for nivel in nivels %}
+                        {% if forloop.last %}
+                        <h3 class="card-title text-nowrap mb-2">{{ nivel.nivel }} cm</h3>
+                        {% endif %}                               
+                        {% endfor %}
                         <small class="text-success fw-semibold">Ativo</small>
                       </div>
                     </div>
@@ -93,7 +101,11 @@
                           </div>
                         </div>
                         <span class="fw-semibold d-block mb-1">Umidade</span>
-                        <h3 class="card-title mb-2">20%</h3>
+                        {% for umidade in umidades %}
+                        {% if forloop.last %}
+                        <h3 class="card-title mb-2">{{ umidade.umidade }} %</h3>
+                        {% endif %}                               
+                        {% endfor %}
                         <small class="text-success fw-semibold">Ativo</small>
                       </div>
                     </div>
@@ -115,7 +127,11 @@
                           </div>
                         </div>
                         <span class="fw-semibold d-block mb-1">TDS</span>
-                        <h3 class="card-title mb-2">109ppm</h3>
+                        {% for tds in tdss %}
+                        {% if forloop.last %}  
+                        <h3 class="card-title mb-2">{{ tds.tds }} ppm</h3>
+                        {% endif %}                               
+                        {% endfor %} 
                         <small class="text-success fw-semibold">Ativo</small>
                       </div>
                     </div>
@@ -132,7 +148,11 @@
                           </div>
                         </div>
                         <span class="fw-semibold d-block mb-1">LDR</span>
-                        <h3 class="card-title mb-2">315</h3>
+                        {% for ldr in ldrs %}
+                        {% if forloop.last %}
+                        <h3 class="card-title mb-2">{{ ldr.luminosidade }}</h3>
+                        {% endif %}                               
+                        {% endfor %}
                         <small class="text-success fw-semibold">Ativo</small>
                       </div>
                     </div>
@@ -149,7 +169,11 @@
                           </div>
                         </div>
                         <span class="fw-semibold d-block mb-1">Temperatura Água</span>
-                        <h3 class="card-title text-nowrap mb-2">28º</h3>
+                        {% for temperatura in temperaturas %}
+                        {% if forloop.last %}
+                        <h3 class="card-title text-nowrap mb-2">{{ temperatura.temperatura }} º</h3>
+                        {% endif %}                               
+                        {% endfor %}
                         <small class="text-success fw-semibold">Ativo</small>
                       </div>
                     </div>

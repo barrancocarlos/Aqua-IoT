@@ -23,32 +23,32 @@
             <li class="menu-item {% if request.path == url %}active{% endif %}">
               <a href="{% url 'home' %}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-tachometer"></i>
-                <div data-i18n="Analytics">Dashboard</div>
+                <div>Dashboard</div>
               </a>
             </li>      
 
             <!-- Aquario -->
             <li class="menu-header small text-uppercase"><span class="menu-header-text">Aquário</span></li>
              <!-- Temperatura -->
-             {% url 'temp-table' as url %}
+             {% url 'temp-aquario' as url %}
              <li class="menu-item {% if request.path == url %}active{% endif %}">
-               <a href="{% url 'temp-graphs' %}" class="menu-link">
+               <a href="{% url 'temp-aquario' %}" class="menu-link">
                  <i class="menu-icon tf-icons bx bx-test-tube"></i>
-                 <div data-i18n="Analytics">Temperatura</div>
+                 <div>Temperatura</div>
                </a>
              </li>
-             <!-- Temperatura -->
-             {% url 'temp-table' as url %}
+             <!-- Nivel Agua -->
+             {% url 'nivel' as url %}
              <li class="menu-item {% if request.path == url %}active{% endif %}">
-               <a href="{% url 'temp-graphs' %}" class="menu-link">
+               <a href="{% url 'nivel' %}" class="menu-link">
                  <i class="menu-icon tf-icons bx bx-water"></i>
                  <div data-i18n="Analytics">Nível de Água</div>
                </a>
              </li>
-             <!-- Temperatura -->
-             {% url 'temp-table' as url %}
+             <!-- TDS -->
+             {% url 'tds' as url %}
              <li class="menu-item {% if request.path == url %}active{% endif %}">
-               <a href="{% url 'temp-graphs' %}" class="menu-link">
+               <a href="{% url 'tds' %}" class="menu-link">
                  <i class="menu-icon tf-icons bx bx-filter"></i>
                  <div data-i18n="Analytics">TDS</div>
                </a>
@@ -57,25 +57,25 @@
             <!-- Plantas -->
             <li class="menu-header small text-uppercase"><span class="menu-header-text">Plantas</span></li>
              <!-- Temperatura -->
-             {% url 'temp-table' as url %}
+             {% url 'temp-plantas' as url %}
              <li class="menu-item {% if request.path == url %}active{% endif %}">
-               <a href="{% url 'temp-graphs' %}" class="menu-link">
+               <a href="{% url 'temp-plantas' %}" class="menu-link">
                  <i class="menu-icon tf-icons bx bx-test-tube"></i>
                  <div data-i18n="Analytics">Temperatura</div>
                </a>
              </li>
               <!-- Umidade -->
-              {% url 'temp-table' as url %}
+              {% url 'umidade' as url %}
               <li class="menu-item {% if request.path == url %}active{% endif %}">
-                <a href="{% url 'temp-graphs' %}" class="menu-link">
+                <a href="{% url 'umidade' %}" class="menu-link">
                   <i class="menu-icon tf-icons bx bx-droplet"></i>
                   <div data-i18n="Analytics">Umidade</div>
                 </a>
               </li>
-               <!-- Temperatura -->
-             {% url 'temp-table' as url %}
+               <!-- LDR -->
+             {% url 'ldr' as url %}
              <li class="menu-item {% if request.path == url %}active{% endif %}">
-               <a href="{% url 'temp-graphs' %}" class="menu-link">
+               <a href="{% url 'ldr' %}" class="menu-link">
                  <i class="menu-icon tf-icons bx bx-sun"></i>
                  <div data-i18n="Analytics">LDR</div>
                </a>
