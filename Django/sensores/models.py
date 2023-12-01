@@ -12,39 +12,39 @@ class Sensor(models.Model):
     
 class TemperaturaPlantas(Sensor):
   temperatura = models.FloatField(max_length=200, default='00')
-  unidade_medida = models.CharField(max_length=50, default='Graus') 
+  unidade_medida = models.CharField(max_length=50, default='graus') 
   def __str__(self):
         return str(self.temperatura) + str(self.unidade_medida)  
   
 class Umidade(Sensor):
   umidade = models.FloatField(max_length=200, default='00')
-  unidade_medida = models.CharField(max_length=50, default='Porcentagem')
+  unidade_medida = models.CharField(max_length=50, default='porcentagem')
   def __str__(self):
         return str(self.umidade) + str(self.unidade_medida)
   
 class TemperaturaAquario(Sensor):
   temperatura = models.FloatField(max_length=200, default='00')
-  unidade_medida = models.CharField(max_length=50, default='Graus') 
+  unidade_medida = models.CharField(max_length=50, default='graus') 
   def __str__(self):
         return str(self.temperatura) + str(self.unidade_medida)  
   
 class NivelAgua(Sensor):
   nivel = models.FloatField(max_length=200, default='00')
   nivel_minimo = models.FloatField(max_length=200, default='30')
-  unidade_medida = models.CharField(max_length=50, default='Centímetros')
+  unidade_medida = models.CharField(max_length=50, default='centímetros')
   def __str__(self):
         return str(self.nivel) + str(self.unidade_medida)
   
 class Ldr(Sensor):
   luminosidade = models.FloatField(max_length=200, default='00')
   media_luminosidade = models.FloatField(max_length=200, default='30')
-  unidade_medida = models.CharField(max_length=50, default='Lux') 
+  unidade_medida = models.CharField(max_length=50, default='lux') 
   def __str__(self):
         return str(self.luminosidade) + str(self.unidade_medida)
   
 class Tds(Sensor):
   tds = models.FloatField(max_length=200, default='00')
   media_tds = models.FloatField(max_length=200, default='30')
-  unidade_medida = models.CharField(max_length=50, default='Ppm')
+  unidade_medida = models.CharField(max_length=50, default='ppm')
   def __str__(self):
         return str(self.tds) + str(self.unidade_medida)   

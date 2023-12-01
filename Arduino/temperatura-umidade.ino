@@ -4,7 +4,8 @@
 
 #include "DHT.h"
 
-#define DHTPIN 2     // Numero do PIN
+// Numero do PIN
+#define DHTPIN 2     
 
 // Tipo de sensor
 #define DHTTYPE DHT11   
@@ -22,7 +23,6 @@ void setup() {
 void loop() {
   // Aguardar 2 segundos
   delay(2000);
-
 
   // Ler umidade
   float h = dht.readHumidity();
