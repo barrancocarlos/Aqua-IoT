@@ -1,4 +1,4 @@
-# AQUA: Aplicativo de monitoramento para sistemas de aquaponia
+# Aqua: Aplicativo de monitoramento para sistemas de aquaponia
 
 O presente trabalho tem como objetivo implementar um dashboard que apresentara as métricas de
 funcionamento de um sistema de aquaponia. O monitoramento se dá com a
