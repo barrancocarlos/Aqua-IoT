@@ -11,20 +11,20 @@ client_id = 'aqua2'
 # password = '*****'
 
 def on_message(client, userdata, message):  
-  print("received message =",str(message.payload.decode("utf-8")))
+  print("mensagem =",str(message.payload.decode("utf-8")))
   url = 'http://127.0.0.1:8000/api/temperatures/'
   tempobj = {'value': str(message.payload.decode("utf-8"))}
   x = requests.post(url, json = tempobj)
-  print("sent to django =", x.text)
+  print("Enviar para Django =", x.text)
   
 
 def on_connect(client, userdata, flags, rc):     
   if rc==0:
-     print("Connected to broker")     
+     print("Conetado ao broker")     
      client.subscribe(topic)
 
 def on_subscribe(client, userdata, mid, granted_qos):
-    print(f'Cliente Subscribed at {topic}')
+    print(f'Cliente assinado a {topic}')
       
       
 client = mqtt.Client(client_id)            
