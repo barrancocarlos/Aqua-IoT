@@ -20,6 +20,6 @@ void loop(){
   sensors.requestTemperatures();
   Serial.print("Temperatura: "); 
   Serial.print(sensors.getTempCByIndex(0)); 
-  Serial.println("*C"); 
+  Serial.println("°C"); 
   delay(250);
 }
