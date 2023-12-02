@@ -38,7 +38,7 @@ class NivelAgua(Sensor):
 class Ldr(Sensor):
   luminosidade = models.FloatField(max_length=200, default='00')
   media_luminosidade = models.FloatField(max_length=200, default='30')
-  unidade_medida = models.CharField(max_length=50, default='lux') 
+  unidade_medida = models.CharField(max_length=50, default='lumen') 
   def __str__(self):
         return str(self.luminosidade) + str(self.unidade_medida)
   
