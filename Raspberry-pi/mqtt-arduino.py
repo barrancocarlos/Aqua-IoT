@@ -48,7 +48,7 @@ while i < 1:
         # LDR 
         print(ldr)  
         client.publish(topic_ldr, ldr) # Publicar LDR no broker MQTT 
-        print("Umidade") # Mostrar LDR
+        print("LDR") # Mostrar LDR
         # TDS
         print(tds)  
         client.publish(topic_tds, tds) # Publicar LDR no broker MQTT 
@@ -60,6 +60,6 @@ while i < 1:
         # Nivel Agua
         print(nivel)                  
         client.publish(topic_nivel, nivel) # Publicar Nivel Agua no broker MQTT         
-        print("Temperatura Agua") # Mostrar Nivel Agua
+        print("Nivel Agua") # Mostrar Nivel Agua
 ser.close()
            
