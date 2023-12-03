@@ -3,23 +3,27 @@ import serial
 import time
 from textwrap import wrap
 
+# Broker MQTT Mosquito
 broker = 'localhost'
 port = 18083
+client_id = 'aqua'
+# username = '*****'
+# password = '*****'
+
+# Topicos MQTT
 topic_temp = "sensores/temperatura"
 topic_hum = "sensores/umidade"
 topic_ldr = "sensores/ldr"
 topic_tds= "sensores/tds"
 topic_temp_agua = "sensores/temperatura-agua"
 topic_nivel = "sensores/nivel"
-client_id = 'aqua'
-# username = '*****'
-# password = '*****'
 
+# Conexão com Broker MQTT Mosquito
 def on_connect(client, userdata, flags, rc):
    if rc==0:
      print("Conetado ao broker")
      
-# Conexao USB com Arduino
+# Conexão USB com Arduino
 ser = serial.Serial('/dev/ttyACM0', 9600, timeout=1)
 time.sleep(2)
       
