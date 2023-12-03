@@ -3,7 +3,7 @@ from .models import TemperaturaPlantas, Umidade, TemperaturaAquario, NivelAgua, 
 from rest_framework import viewsets
 from rest_framework import status, viewsets
 from rest_framework.response import Response
-from .serializers import TemperaturaAquarioSerializer, UmidadeSerializer, NivelAguaSerializer, TemperaturaPlantasSerializer, LdrSerializer
+from .serializers import TemperaturaAquarioSerializer, UmidadeSerializer, NivelAguaSerializer, TemperaturaPlantasSerializer, LdrSerializer, TdsSerializer
 from django.contrib.auth import login, authenticate, logout
 from rest_framework.permissions import IsAuthenticated
 
@@ -136,6 +136,15 @@ class LdrViewset(viewsets.ViewSet):
     serializer = LdrSerializer(data=request.data)
     serializer.is_valid(raise_exception=True)            
     the_response = LdrSerializer(serializer.save())
+    return Response(the_response.data, status=status.HTTP_201_CREATED)
+  
+# TDS
+class TdsViewset(viewsets.ViewSet):
+  permission_classes = (IsAuthenticated,)  
+  def create(self, request):
+    serializer = TdsSerializer(data=request.data)
+    serializer.is_valid(raise_exception=True)            
+    the_response = TdsSerializer(serializer.save())
     return Response(the_response.data, status=status.HTTP_201_CREATED)
    
      

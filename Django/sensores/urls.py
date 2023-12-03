@@ -7,6 +7,8 @@ router.register('temperatura-aquario', views.TemperaturaAquarioViewset, basename
 router.register('umidade', views.UmidadeViewset, basename='umidade')
 router.register('nivel', views.NivelAguaViewset, basename='nivel')
 router.register('temperatura-plantas', views.TemperaturaPlantasViewset, basename='temperatura-plantas')
+router.register('ldr', views.LdrViewset, basename='ldr')
+router.register('tds', views.TdsViewset, basename='tds')
 
 urlpatterns = [    
     path('', views.home, name='home'),
