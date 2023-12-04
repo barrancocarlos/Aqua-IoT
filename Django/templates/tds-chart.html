@@ -13,8 +13,25 @@ var options = {
             enabled: true
           }
         },
+        annotations: {
+          yaxis: [{
+            y: 200.00,
+            borderColor: '#00E396',
+            label: {
+              borderColor: '#00E396',
+              style: {
+                color: '#fff',
+                background: '#00E396',
+              },
+              text: 'Nivel Mínimo',
+            }
+          }]
+          },
         dataLabels: {
           enabled: false
+        },
+        yaxis: {
+          max: 220.00,
         },
         stroke: {
           curve: 'smooth'

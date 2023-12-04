@@ -4,7 +4,7 @@
 var options = {
           series: [{
             name: "cm",
-            data: [{% for nivel in nivels %}{{nivel.nivel}}{% if not forloop.last %},{% endif %}{% endfor %}]
+            data: [{% for nivel in nivels %}{{nivel.nivel_minimo}} - {{nivel.nivel}}{% if not forloop.last %},{% endif %}{% endfor %}]
         }],
           chart: {
           height: 350,
@@ -16,6 +16,20 @@ var options = {
         dataLabels: {
           enabled: false
         },
+        annotations: {
+          yaxis: [{
+            y: 10.00,
+            borderColor: '#00E396',
+            label: {
+              borderColor: '#00E396',
+              style: {
+                color: '#fff',
+                background: '#00E396',
+              },
+              text: 'Nivel Mínimo',
+            }
+          }]
+          },
         stroke: {
           curve: 'smooth'
         },

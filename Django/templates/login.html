@@ -12,19 +12,18 @@
             <div class="card-body">
               <!-- Logo -->
               <div class="app-brand justify-content-center">
-                <a href="index.html" class="app-brand-link gap-2">
-                
-                  <span class="app-brand-text demo text-body fw-bolder">Sneat</span>
-                </a>
+                <img
+                src="{% static 'assets/img/illustrations/aqua-logo.png' %}"
+                alt="chart success"
+                class="aqua-logo"
+              />
               </div>
-              <!-- /Logo -->
-              <h4 class="mb-2">Welcome to Sneat!</h4>
-              <p class="mb-4">Please sign-in to your account and start the adventure</p>
+              <!-- /Logo -->             
 
               <form id="formAuthentication" class="mb-3" method="POST">
                 {% csrf_token %}
                 <div class="mb-3">
-                  <label for="email" class="form-label">Email or Username</label>
+                  <label for="email" class="form-label">Usuário</label>
                   <input
                     type="text"
                     class="form-control"
@@ -34,7 +33,8 @@
                     autofocus
                   />
                 </div>
-                <div class="mb-3 form-password-toggle">                
+                <div class="mb-3 form-password-toggle">  
+                  <label for="email" class="form-label">Senha</label>              
                   <div class="input-group input-group-merge">
                     <input
                       type="password"

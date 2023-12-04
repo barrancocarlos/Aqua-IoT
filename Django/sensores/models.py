@@ -30,7 +30,7 @@ class TemperaturaAquario(Sensor):
   
 class NivelAgua(Sensor):
   nivel = models.FloatField(max_length=200, default='00')
-  nivel_minimo = models.FloatField(max_length=200, default='30')
+  nivel_minimo = models.FloatField(max_length=200, default='200')
   unidade_medida = models.CharField(max_length=50, default='centímetros')
   def __str__(self):
         return str(self.nivel) + str(self.unidade_medida)

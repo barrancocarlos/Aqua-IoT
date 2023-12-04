@@ -3,7 +3,7 @@
 #include "GravityTDS.h"
 
 // Numero do PIN
-#define TdsSensorPin 8
+#define TdsSensorPin A4
 
 GravityTDS gravityTds;
 
