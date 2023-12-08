@@ -9,9 +9,13 @@ _Tela do Aplicativo Django_
 
 ![Alt Text](https://github.com/barrancocarlos/Aqua-IoT/blob/main/Django/static/assets/img/illustrations/home-aqua.png)
 
-_Sistema IoT_
+_Diagrama_
 
 ![Alt Text](https://github.com/barrancocarlos/Aqua-IoT/blob/main/Django/static/assets/img/illustrations/circuits.jpg)
+
+_Sistema IoT_
+
+![Alt Text](https://github.com/barrancocarlos/Aqua-IoT/blob/main/Django/static/assets/img/illustrations/aqua1.jpg)
 
 ## Guia de instalação rápida
 
